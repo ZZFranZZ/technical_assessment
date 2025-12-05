@@ -1,4 +1,61 @@
-echo "trash/" >> .gitignore
-echo "*.log" >> .gitignore
-echo "*.tmp" >> .gitignore
+# === System / Editor files ===
+*.log
+*.tmp
+*.swp
+*.bak
+*.DS_Store
+Thumbs.db
+
+# === Trash folder ===
+trash/
+
+# === Kubernetes configs & secrets ===
+*.crt
+*.key
+*.pem
+*.kubeconfig
+*.secret.yaml
+
+# === Helm artifacts ===
+# Chart lock files
+Chart.lock
+# Helm release packages
+*.tgz
+
+# === Node / Frontend builds (para portal frontend) ===
+node_modules/
+dist/
+build/
+.cache/
+coverage/
+
+# === Python / Backend builds (si usas Python en backend) ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.env
+.venv
+venv/
+
+# === IDE / Editor configs ===
+.vscode/
+.idea/
+*.iml
+
+# === OS-specific ===
+ehthumbs.db
+Desktop.ini
+
+# === GitHub Actions runners (logs, tmp) ===
+2-github-actions-runners/runner-setup/*.log
+2-github-actions-runners/runner-setup/tmp/
+
+# === Self-service portal artifacts ===
+3-self-service-capabilities/portal/frontend/.next/
+3-self-service-capabilities/portal/frontend/out/
+3-self-service-capabilities/portal/backend/.pytest_cache/
+
 
