@@ -1,0 +1,4 @@
+echo "trash/" >> .gitignore
+echo "*.log" >> .gitignore
+echo "*.tmp" >> .gitignore
+
